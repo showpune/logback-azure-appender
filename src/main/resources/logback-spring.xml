@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <appender name="eventHub" class="person.zhiyongli.kafkaappender.EventHubAppender">
+        <eventHubName>log</eventHubName>
+        <connectionString>Endpoint=sb://zhiyongkafka.servicebus.windows.net/;SharedAccessKeyName=logSend;SharedAccessKey=6nvzDeXOu1JpGwNl3w+MZwibvnk7wvGiq7Hu+W9uLHs=;EntityPath=log</connectionString>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%date %level [%thread] %logger{36} [%file : %line] %msg%n</pattern>
+        </layout>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date %level [%thread] %logger{36} [%file : %line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="eventHub"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
