@@ -13,7 +13,7 @@
     <appender name="BLOB" class="person.zhiyongli.azure.appender.RollingAzureBlobAppender">
         <blobName>weblog</blobName>
         <containerName>sample-log</containerName>
-        <connectionString>DefaultEndpointsProtocol=https;AccountName=storage4logtest;AccountKey=rTFChte6huow82doy1zjzb9XugrajLKmOx0FZAgUaVU/iSSQqMe92fOvl0hoLOQikGMERIwcpNMgQQhqq3qWHQ==;EndpointSuffix=core.windows.net</connectionString>
+        <connectionString>DefaultEndpointsProtocol=https;AccountName=storage4logtest;AccountKey=key;EndpointSuffix=core.windows.net</connectionString>
         <layout class="ch.qos.logback.classic.PatternLayout">
             <pattern>%date %level [%thread] %logger{36} [%file : %line] %msg%n</pattern>
         </layout>
