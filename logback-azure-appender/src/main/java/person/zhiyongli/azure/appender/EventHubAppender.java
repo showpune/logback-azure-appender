@@ -1,4 +1,4 @@
-package person.zhiyongli.kafkaappender;
+package person.zhiyongli.azure.appender;
 
 
 import ch.qos.logback.core.AppenderBase;
